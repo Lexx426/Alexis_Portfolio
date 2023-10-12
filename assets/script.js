@@ -11,13 +11,16 @@ window.addEventListener('load', ()=>{
         tab.addEventListener('click',(event)=>{
             removeActive();
             tab.classList.add('tab-active');
+            // or maybe it is the tab active class - go check
         
         let filterName = event.target.getAttribute('data-name');
 
         allProject.forEach(project=>{
             let projectName = project.getAttribute('data-name');
             if ((projectName == filterName) || filterName == 'All'){
-                project.style.display = 'block';
+                project.style.display = 'flex';
+                // feel like this is the issue, maybe there is a better way to do this?
+
             }else{
                 project.style.display = 'none'
             }

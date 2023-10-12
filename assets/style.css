@@ -60,7 +60,7 @@ a{
 }
 
 section{
-    padding: 8rem 0;
+    padding: 4rem 0;
 }
 
 section>h2{
@@ -124,7 +124,7 @@ img{
     border: 2px solid transparent;
     border-radius: 1.2rem;
     transition: var(--transition);
-    max-width: 350px;
+    max-width: 20rem;
 }
 
 .card:hover{
@@ -382,23 +382,40 @@ header{
 
 /* ............skills.......... */
 
+#Skills{
+    margin: 0 auto;
+
+}
 .skill-header{
     height: auto;
 }
-
-section > header{
-    font-size: 60px;
+#Skills > header{
+    font-size: 4rem;
     text-align: center;
-    padding: 24px;
+    padding: 1.5rem;
 }
+
+/* .skill{
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+} */
+/* need to drop to 1 */
 
 section .skill{
     display: grid;
-    grid-gap: 16px;
-    padding: 16px;
+    grid-gap: 1rem;
+    padding: 1rem;
     max-width: 1024px;
     margin: auto;
+
+
+} 
+
+.skill-card{
+    /* max-height: 20rem; */
 }
+
 
 @media screen and (min-width: 600px){
     .skill{
@@ -408,13 +425,19 @@ section .skill{
 
 @media screen and (max-width: 600px){
     .skill{
-        grid-template-columns: 1fr;
+        display:flex;
+        justify-content: center;
+        /* grid-template-columns: 1fr; */
+        /* -ms-grid-column-align:end; */
+        /* display: flex;
+        flex-direction: column; */ 
+        /* bro, think alexis. you added margin but no */
     }
 }
 
 .skill .set{
     background-color: var(--color-bg2);
-    padding: 24px;
+    padding: 1.2rem;
     border-radius: 16px;
     cursor: pointer;
 }
@@ -427,9 +450,9 @@ section .skill{
     display: flex;
     justify-content: center;
     align-items: center;
-    width:80px;
-    height:80px;
-    font-size: 48px;
+    width:4.5rem;
+    height:4.5rem;
+    font-size: 2.5rem;
     background-color: var(--color-primary);
     color: white;
     border-radius: 35%;
@@ -437,13 +460,13 @@ section .skill{
 }
 
 .card > header{
-    padding-block: 24px;
-    font-size: 30px;
+    padding: 0.5rem;
+    font-size: 2rem;
     color: var(--color-white);
     text-align: center;
 }
 .card .list{
-    padding-block: 8px;
+    padding-block: 0.5rem;
     display: grid;
     grid-template-columns: 1fr 28px;
     text-transform: capitalize;
@@ -455,11 +478,11 @@ section .skill{
 }
 
 .list > label{
-    font-size: 22px;
+    font-size: 1.2rem;
 }
 
 .list > i {
-    font-size: 35px;
+    font-size: 2rem;
 
 }
 
@@ -503,10 +526,21 @@ section .skill{
     border-radius: 0.8rem;
 }
 
+.par{
+    position: relative;
+    height: 100%;
+}
+
+.bottom{
+    position: absolute;
+    bottom: 0px;
+}
+
 .project-action-aria{
     display: flex;
     gap: 1rem;
     align-items:center ;
+    
 }
 
 .test{
@@ -674,6 +708,8 @@ form input::placeholder,textarea::placeholder{
 
     .portfolio-projects{
         grid-template-columns: 1fr 1fr;
+        
+
     }
     
 }
@@ -737,6 +773,7 @@ form input::placeholder,textarea::placeholder{
         grid-template-columns: 1fr 1fr;
         gap: 4%;
     }
+    
     /* Project section........................................... */
     .portfolio-tabs{
         gap: 1rem;
@@ -745,9 +782,13 @@ form input::placeholder,textarea::placeholder{
         padding: 8px 18px !important;
     }
     .portfolio-projects{
-        grid-template-columns: 1fr;
+        /* grid-template-columns: 1fr; */
         gap: 1.4rem;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
     }
+
     /* start Nav section............................................................. */
     nav{
         height: 4rem;
@@ -768,5 +809,8 @@ form input::placeholder,textarea::placeholder{
     }
     .menubar-container a{
         font-size: 1.3rem;
+    }
+    .bottom {
+        position: relative;
     }
 }
